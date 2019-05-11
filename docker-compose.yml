@@ -3,7 +3,7 @@ services:
   builder:
     build: .
     environment:
-        MICROPYTHON_LIB: uasyncio, calendar
+        MICROPYTHON_LIB: uasyncio
     volumes:
       - ./build.sh:/home/builder/build.sh
       - ./my_module:/home/builder/micropython/ports/esp8266/modules/my_module

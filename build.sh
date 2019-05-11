@@ -1,12 +1,13 @@
 cd /tmp
 git clone https://github.com/micropython/micropython-lib
+rm -rf ~/.micropython/lib
 cd micropython-lib
 make install
 
 cd ~/.micropython/lib
 DEST=/home/builder/micropython/ports/esp8266/modules
 
-modules=', ' read -r -a array <<< "$MICROPYTHON_LIB"
+modules=($MICROPYTHON_LIB)
 
 echo "Copy modules..."
 
